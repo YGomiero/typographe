@@ -5,7 +5,7 @@ Description
 * A Joomla plugin for french typography management, powered by JoliTypo
 * Joomla version: 3.8.0 or newer
 
-## Plugin parameter
+## Plugin parameters
 ![System - Typographe Plugin](https://image.prntscr.com/image/zUr3A88QQXKN20NWAnwXtw.png)
 
 Copyright

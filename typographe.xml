@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.7" group="system" method="upgrade">
+	<name>PLG_TYPOGRAPHE_NAME</name>
+	<author>Le typographe</author>
+	<creationDate>September 2018</creationDate>
+	<copyright>Copyright 2018 Joomla. All rights reserved.</copyright>
+    <license>GNU/GPL Version 2 or later</license>
+	<authorEmail>yann@gomiero.me</authorEmail>
+	<authorUrl>gomiero.me</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_TYPOGRAPHE_DESC</description>
+    <scriptfile>script.php</scriptfile>
+	<files>
+		<folder>vendor</folder>
+		<filename plugin="typographe">typographe.php</filename>
+		<folder>language</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+		    <fieldset name="basic">
+			<field
+					type="spacer"
+					name="base_header_note"
+					label="PLG_TYPOGRAPHE_HEADER_NOTE"
+			/>
+			<field
+					type="text"
+					name="setlocale"
+					label="setLocale"
+					default="fr_FR"
+			/>
+			<field
+					type="spacer"
+					name="base_params_note"
+					label="PLG_TYPOGRAPHE_PARAMS_NOTE"
+			/>
+			<field 
+					name="ellipsis" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_ELLIPSIS" 
+					description="PLG_TYPOGRAPHE_ELLIPSIS_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+			<field 
+					name="dimension" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_DIMENSION" 
+					description="PLG_TYPOGRAPHE_DIMENSION_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+			<field 
+					name="unit" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_UNIT" 
+					description="PLG_TYPOGRAPHE_UNIT_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field 
+					name="dash" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_DASH" 
+					description="PLG_TYPOGRAPHE_DASH_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field 
+					name="smartquotes" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_SMARTQUOTES" 
+					description="PLG_TYPOGRAPHE_SMARTQUOTES_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field 
+					name="frenchnobreakspace" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_FRENCHNOBREAKSPACE" 
+					description="PLG_TYPOGRAPHE_FRENCHNOBREAKSPACE_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field 
+					name="nospacebeforecomma" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_NOSPACEBEFORECOMMA" 
+					description="PLG_TYPOGRAPHE_NOSPACEBEFORECOMMA_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field 
+					name="curlyquote" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_CURLYQUOTE" 
+					description="PLG_TYPOGRAPHE_CURLYQUOTE_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field 
+					name="hyphen" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_HYPHEN" 
+					description="PLG_TYPOGRAPHE_HYPHEN_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field 
+					name="trademark" 
+					type="radio" 
+					default="1" 
+					label="PLG_TYPOGRAPHE_TRADEMARK" 
+					description="PLG_TYPOGRAPHE_TRADEMARK_DESC"
+					class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>				
+			</fieldset>			
+		</fields>
+	</config>	
+</extension>

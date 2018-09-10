@@ -7,7 +7,7 @@
     <license>GNU/GPL Version 2 or later</license>
 	<authorEmail>yann@gomiero.me</authorEmail>
 	<authorUrl>gomiero.me</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>PLG_TYPOGRAPHE_DESC</description>
     <scriptfile>script.php</scriptfile>
 	<files>
@@ -139,5 +139,10 @@
 				</field>				
 			</fieldset>			
 		</fields>
-	</config>	
-</extension>
+	</config>
+	
+	  <updateservers>
+    <server type="extension" name="Typographe Update Site">https://raw.githubusercontent.com/YGomiero/Typographe-Update-Server-for-Joomla/master/version.xml</server>
+    </updateservers>
+
+	</extension>

@@ -46,7 +46,7 @@ class plgSystemTypographe  extends JPlugin
 		
 		$fixer = new Fixer($parametres);	
 		$fixer->setLocale($this->params->get('setlocale','fr_FR'));
-		$article->text = $fixer->fixString($article->text); 
+		$article->text = $fixer->fix($article->text); 
 		
 	}
 

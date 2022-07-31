@@ -1,6 +1,11 @@
 Changelog Typographe
 =====================
 
+1.0.2 (2022-07-31)
+------------------
+- Update server xml
+- update and fix code
+
 1.0.1 (2018-09-10)
 ------------------
 - Update server xml

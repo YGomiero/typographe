@@ -2,12 +2,12 @@
 <extension type="plugin" version="3.7" group="system" method="upgrade">
 	<name>PLG_TYPOGRAPHE_NAME</name>
 	<author>Le typographe</author>
-	<creationDate>September 2018</creationDate>
-	<copyright>Copyright 2018 Joomla. All rights reserved.</copyright>
+	<creationDate>June 2022</creationDate>
+	<copyright>Copyright 2018-2022 Yann Gomiero and Jolicode . All rights reserved.</copyright>
     <license>GNU/GPL Version 2 or later</license>
-	<authorEmail>yann@gomiero.me</authorEmail>
-	<authorUrl>gomiero.me</authorUrl>
-	<version>1.0.1</version>
+	<authorEmail>contact@distro.fr</authorEmail>
+	<authorUrl>distro.fr</authorUrl>
+	<version>1.0.2</version>
 	<description>PLG_TYPOGRAPHE_DESC</description>
     <scriptfile>script.php</scriptfile>
 	<files>

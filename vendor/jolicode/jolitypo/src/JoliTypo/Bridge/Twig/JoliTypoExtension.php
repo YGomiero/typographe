@@ -1,32 +1,41 @@
 <?php
-namespace JoliTypo\Bridge\Symfony\Twig;
+
+/*
+ * This file is part of JoliTypo - a project by JoliCode.
+ *
+ * This software consists of voluntary contributions made by many individuals
+ * and is licensed under the MIT license.
+ */
+
+namespace JoliTypo\Bridge\Twig;
 
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
+use Twig\Extension\AbstractExtension;
 
-class JoliTypoExtension extends \Twig_Extension
+class JoliTypoExtension extends AbstractExtension
 {
-    private $presets = array();
+    private $presets = [];
 
     public function __construct($presets)
     {
         $this->presets = $presets;
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
-        return array(
-            new \Twig_SimpleFunction('jolitypo', array($this, 'translate')),
-        );
+        return [
+            new \Twig\TwigFunction('jolitypo', [$this, 'translate']),
+        ];
     }
 
-    public function getFilters()
+    public function getFilters(): array
     {
-        return array(
-            new \Twig_SimpleFilter('jolitypo', array($this, 'translate'), array('pre_escape' => 'html', 'is_safe' => array('html'))),
-        );
+        return [
+            new \Twig\TwigFilter('jolitypo', [$this, 'translate'], ['pre_escape' => 'html', 'is_safe' => ['html']]),
+        ];
     }
 
-    public function translate($text, $preset = "default")
+    public function translate($text, $preset = 'default')
     {
         if (!isset($this->presets[$preset])) {
             throw new InvalidConfigurationException(sprintf("There is no '%s' preset configured.", $preset));

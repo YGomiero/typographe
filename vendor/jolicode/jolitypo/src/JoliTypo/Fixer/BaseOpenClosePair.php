@@ -22,17 +22,17 @@ abstract class BaseOpenClosePair
         $storedSibling = $stateBag->getSiblingNode($stateName);
 
         // If no stored open quote node & open quote detected
-        if ($storedSibling === false && preg_match($openRegexp, $content)) {
+        if (false === $storedSibling && preg_match($openRegexp, $content)) {
             // Store the current node
             $stateBag->storeSiblingNode($stateName);
 
         // If we have a open sibling and we detect a closing quote
         } elseif ($storedSibling instanceof StateNode && preg_match($closeRegexp, $content)) {
             // Replace the closing tag
-            $content = preg_replace($closeRegexp, '$1'.$closeReplacement.'$2', $content, 1);
+            $content = preg_replace($closeRegexp, '$1' . $closeReplacement . '$2', $content, 1);
 
             // Replace the opening tag
-            $open_content = preg_replace($openRegexp, '$1'.$openReplacement.'$2', $storedSibling->getNode()->wholeText, 1);
+            $open_content = preg_replace($openRegexp, '$1' . $openReplacement . '$2', $storedSibling->getNode()->wholeText, 1);
 
             $stateBag->fixSiblingNode($stateName, $open_content);
         }

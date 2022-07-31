@@ -24,7 +24,7 @@ class plgSystemTypographe  extends JPlugin
 
 		if ($document->getType() !== 'html'
 			|| $input->get('tmpl', '', 'cmd') === 'component'
-			|| $app->isAdmin()
+			|| $app->isClient('administrator')
 			|| $context == 'com_finder.indexer')
 		{
 			return true;
@@ -46,7 +46,7 @@ class plgSystemTypographe  extends JPlugin
 		
 		$fixer = new Fixer($parametres);	
 		$fixer->setLocale($this->params->get('setlocale','fr_FR'));
-		$article->text = $fixer->fixString($article->text); 
+		$article->text = $fixer->fix($article->text); 
 		
 	}
 

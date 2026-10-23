@@ -72,7 +72,7 @@ Since 2.0.6, Joomla detects stable GitHub releases through its native update man
 
 JoliTypo 1.8.0, Hyphenator 3.2.0 and Symfony Intl Normalizer polyfill 1.43.0 are pinned by Composer. See the [main README](../README.md) for build and test commands.
 
-Contact / Support: [extensions@gomiero.me](mailto:extensions@gomiero.me)
+Support: [Report an issue or ask a question on GitHub](https://github.com/YGomiero/typographe/issues)
 
 ## Screenshots
 

@@ -13,6 +13,14 @@ Requires **Joomla 6, PHP 8.3+, DOM and mbstring**. The ZIP contains its dependen
 
 Powered by [JoliTypo](https://github.com/jolicode/JoliTypo) **1.8.0**, with Hyphenator 3.2.0 and Symfony Intl Normalizer polyfill 1.43.0. Versions are pinned in `composer.lock`. This release targets PHP 8.3 and does not track JoliTypo's development branch.
 
+## Screenshots / Captures
+
+![Typographe — Review. Choose. Apply.](docs/00-overview-ai.png)
+
+Editorial illustration generated with ChatGPT / Illustration éditoriale générée avec ChatGPT.
+
+[Illustrated English guide](docs/README.en.md#screenshots) · [Guide français illustré](docs/README.fr.md#captures)
+
 ## Development / Développement
 
 ```sh

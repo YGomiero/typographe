@@ -77,3 +77,19 @@ JoliTypo 1.8.0, Hyphenator 3.2.0 and Symfony Intl Normalizer polyfill 1.43.0 are
 [Rapport français / English audit report](JED-CHECKER.md) — 2.0.8, Joomla 6.2.0.
 
 Contact / Support: [extensions@gomiero.me](mailto:extensions@gomiero.me)
+
+## Screenshots
+
+Actual Joomla 6.2.0 screenshots, English interface with a French example.
+
+### Compare rendered content
+![Before and After preview with yellow correction highlights](01-rendered-preview.png)
+
+### Choose individual corrections
+![A correction rejected by clicking in the After view](02-individual-choice.png)
+
+### Configure the editing workflow
+![Automatic save correction and supported content settings](03-settings.png)
+
+### Choose typography rules
+![Configurable typography rules](04-rules.png)

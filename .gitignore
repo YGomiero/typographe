@@ -3,3 +3,6 @@
 /*.zip
 /language/en-GB/en-GB.plg_system_typographe*.ini
 /language/fr-FR/fr-FR.plg_system_typographe*.ini
+
+__pycache__/
+*.pyc

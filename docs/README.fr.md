@@ -1,11 +1,11 @@
-# Typographe 2.0.5 — Guide français
+# Typographe 2.0.6 — Guide français
 
 [Accueil](../README.md) · [English](README.en.md)
 
 ## Installation et mise à niveau
 
 1. Sauvegarder le site avant toute mise à niveau.
-2. Télécharger `plg_system_typographe-2.0.5.zip` depuis les [versions GitHub](https://github.com/YGomiero/typographe/releases/tag/2.0.5).
+2. Télécharger `plg_system_typographe-2.0.6.zip` depuis les [versions GitHub](https://github.com/YGomiero/typographe/releases/tag/2.0.6).
 3. Installer le ZIP dans Joomla : **Système → Installation → Extensions**.
 4. Activer **Système - Typographe** dans les plugins et vérifier ses paramètres.
 
@@ -64,7 +64,7 @@ Les balises HTML et leurs attributs, commentaires, blocs `pre`, `code`, `script`
 
 Les guillemets répartis sur plusieurs balises nécessitent parfois une correction manuelle. Les champs personnalisés, méta-descriptions et composants tiers ne sont pas intégrés dans cette version. Le point d’accès de vérification exige une session d’administration, POST, un jeton CSRF et les droits de création/modification ; il ne sauvegarde rien. Limites : 1 Mo de texte et 10 Ko de titre.
 
-L’ancien serveur de mise à jour n’est pas utilisé : les mises à jour de cette version s’installent manuellement depuis les versions GitHub. Les historiques Joomla peuvent aider à revenir en arrière lorsqu’ils sont activés, mais ne remplacent pas une sauvegarde.
+Depuis la version 2.0.6, Joomla détecte les versions GitHub stables via son gestionnaire de mises à jour. Installer la 2.0.6 une fois pour enregistrer le canal, puis utiliser Système → Mise à jour → Extensions. La détection est automatique ; l’installation est déclenchée par l’administrateur, sans télécharger le ZIP manuellement. Les historiques Joomla peuvent aider à revenir en arrière lorsqu’ils sont activés, mais ne remplacent pas une sauvegarde.
 
 ## Validation et dépendances
 

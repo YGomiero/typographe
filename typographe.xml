@@ -3,13 +3,14 @@
  <name>PLG_SYSTEM_TYPOGRAPHE_NAME</name>
  <author>Yann Gomiero</author><creationDate>2026-10</creationDate>
  <copyright>Copyright Yann Gomiero; JoliTypo contributors</copyright>
- <license>GPL-3.0-or-later</license><version>2.0.5</version>
+ <license>GPL-3.0-or-later</license><version>2.0.6</version>
  <description>PLG_SYSTEM_TYPOGRAPHE_DESC</description>
  <namespace path="src">Yann\Plugin\System\Typographe</namespace>
  <scriptfile>script.php</scriptfile>
  <files><folder plugin="typographe">services</folder><folder>src</folder><folder>dependencies</folder><folder>language</folder><filename>LICENSE</filename></files>
  <media destination="plg_system_typographe" folder="media"><filename>editor.js</filename><filename>compare.js</filename><filename>editor.css</filename></media>
  <languages folder="language"><language tag="en-GB">en-GB/plg_system_typographe.ini</language><language tag="en-GB">en-GB/plg_system_typographe.sys.ini</language><language tag="fr-FR">fr-FR/plg_system_typographe.ini</language><language tag="fr-FR">fr-FR/plg_system_typographe.sys.ini</language></languages>
+ <updateservers><server type="extension" priority="1" name="Typographe — GitHub releases">https://github.com/YGomiero/typographe/releases/latest/download/update.xml</server></updateservers>
  <config><fields name="params"><fieldset name="basic"><field name="automatic" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_AUTOMATIC" description="PLG_SYSTEM_TYPOGRAPHE_AUTOMATIC_DESC"><option value="0">JNO</option><option value="1">JYES</option></field>
 <field name="titles" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_TITLES"><option value="0">JNO</option><option value="1">JYES</option></field>
 <field name="categories" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_CATEGORIES"><option value="0">JNO</option><option value="1">JYES</option></field>
@@ -25,3 +26,4 @@
 <field name="hyphen" type="radio" layout="joomla.form.field.radio.switcher" default="0" label="PLG_SYSTEM_TYPOGRAPHE_HYPHEN"><option value="0">JNO</option><option value="1">JYES</option></field>
 <field name="trademark" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_TRADEMARK"><option value="0">JNO</option><option value="1">JYES</option></field>
 </fieldset></fields></config></extension>
+

@@ -1,6 +1,6 @@
 <?php
 $root=dirname(__DIR__);
-$out=$argv[1] ?? $root.'/plg_system_typographe-2.0.5.zip';
+$out=$argv[1] ?? $root.'/plg_system_typographe-2.0.6.zip';
 if (!is_file($root.'/dependencies/autoload.php')) throw new RuntimeException('Run composer install first.');
 $zip=new ZipArchive;
 if ($zip->open($out,ZipArchive::CREATE|ZipArchive::OVERWRITE)!==true) throw new RuntimeException('Cannot create ZIP.');
@@ -15,3 +15,4 @@ foreach (['services','src','dependencies','language','media'] as $folder) {
 foreach (['typographe.xml','script.php','LICENSE'] as $file) $zip->addFile("$root/$file",$file);
 $zip->close();
 echo $out."\n";
+

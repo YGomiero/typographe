@@ -100,9 +100,9 @@ final class Typographe extends CMSPlugin implements SubscriberInterface
             'kind' => $kind, 'field' => 'jform_' . $field,
         ]);
         $document->getWebAssetManager()
-            ->registerAndUseScript('plg_system_typographe.compare', Uri::root() . 'media/plg_system_typographe/compare.js', ['version' => '2.0.5'], ['defer' => true])
-            ->registerAndUseScript('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.js', ['version' => '2.0.5'], ['defer' => true], ['core', 'plg_system_typographe.compare'])
-            ->registerAndUseStyle('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.css', ['version' => '2.0.5']);
+            ->registerAndUseScript('plg_system_typographe.compare', Uri::root() . 'media/plg_system_typographe/compare.js', ['version' => '2.0.6'], ['defer' => true])
+            ->registerAndUseScript('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.js', ['version' => '2.0.6'], ['defer' => true], ['core', 'plg_system_typographe.compare'])
+            ->registerAndUseStyle('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.css', ['version' => '2.0.6']);
     }
 
     public function check(AjaxEvent $event): void
@@ -160,3 +160,4 @@ final class Typographe extends CMSPlugin implements SubscriberInterface
     }
 
 }
+

@@ -1,11 +1,11 @@
-# Typographe 2.0.5 — English guide
+# Typographe 2.0.6 — English guide
 
 [Home](../README.md) · [Français](README.fr.md)
 
 ## Installation and upgrades
 
 1. Back up your site before upgrading.
-2. Download `plg_system_typographe-2.0.5.zip` from [GitHub releases](https://github.com/YGomiero/typographe/releases/tag/2.0.5).
+2. Download `plg_system_typographe-2.0.6.zip` from [GitHub releases](https://github.com/YGomiero/typographe/releases/tag/2.0.6).
 3. Install the ZIP through Joomla: **System → Install → Extensions**.
 4. Enable **System - Typographe** and review its settings.
 
@@ -64,7 +64,7 @@ HTML tags and attributes, comments, `pre`, `code`, `script`, `style`, `textarea`
 
 Quotes spanning multiple HTML tags may need manual correction. Custom fields, metadata descriptions and third-party components are not integrated in this release. The review endpoint requires an administrator session, POST, a CSRF token and create/edit permissions; it does not save data. Input limits: 1 MB of body text and 10 KB of title text.
 
-The old update server is not used: install updates manually from GitHub releases. Joomla content history can help restore changes when enabled, but does not replace a backup.
+Since 2.0.6, Joomla detects stable GitHub releases through its native update manager. Install 2.0.6 once to register the channel, then use System → Update → Extensions. Detection is automatic; installation is started by the administrator without manually downloading the ZIP. Joomla content history can help restore changes when enabled, but does not replace a backup.
 
 ## Validation and dependencies
 

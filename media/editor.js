@@ -126,7 +126,9 @@
     const apply = button('APPLY', buttons, () => {
       if (!snapshot || !same(snapshot, read())) { status.textContent = t('STALE'); apply.disabled = true; return; }
       undoValue = snapshot; write(result); appliedValue = read();
-      reviewed.value=JSON.stringify(appliedValue);
+      // TinyMCE may serialize the same content differently when the form saves.
+      reviewed.value=JSON.stringify({...appliedValue,
+        editorText:Joomla.editors?.instances?.[field.id]?.getValue() ?? appliedValue.text});
       undo.disabled = false; apply.disabled = true; preview.hidden = true; status.textContent = t('APPLIED');
     }); apply.disabled = true;
     const undo = button('UNDO', buttons, () => {

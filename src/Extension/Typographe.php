@@ -1,4 +1,8 @@
 <?php
+/**
+ * @copyright Copyright (C) 2026 Yann Gomiero
+ * @license GNU General Public License version 3 or later; see LICENSE
+ */
 namespace Yann\Plugin\System\Typographe\Extension;
 
 defined('_JEXEC') or die;
@@ -50,10 +54,11 @@ final class Typographe extends CMSPlugin implements SubscriberInterface
             $review = json_decode($app->getInput()->post->get('typographe_reviewed', '', 'raw'), true);
             $posted = $app->getInput()->post->get('jform', [], 'array');
             $bodyKey = $fields[0] === 'introtext' ? 'articletext' : $fields[0];
+            $lineEndings = static fn ($text) => is_string($text) ? str_replace(["\r\n", "\r"], "\n", $text) : null;
             if (is_array($review) && isset($review['text'], $review['title'], $review['language'])
-                && $review['text'] === ($posted[$bodyKey] ?? null)
+                && in_array($lineEndings($posted[$bodyKey] ?? null), [$lineEndings($review['text']), $lineEndings($review['editorText'] ?? $review['text'])], true)
                 && $review['title'] === ($posted['title'] ?? null)
-                && $review['language'] === ($posted['language'] ?? '*')) { return; }
+                && ($review['language'] ?: '*') === (($posted['language'] ?? '') ?: '*')) { return; }
         }
         if ($this->params->get('titles', 1)) { $fields[] = 'title'; }
         $service = new Typography($this->params->toArray());
@@ -100,9 +105,9 @@ final class Typographe extends CMSPlugin implements SubscriberInterface
             'kind' => $kind, 'field' => 'jform_' . $field,
         ]);
         $document->getWebAssetManager()
-            ->registerAndUseScript('plg_system_typographe.compare', Uri::root() . 'media/plg_system_typographe/compare.js', ['version' => '2.0.6'], ['defer' => true])
-            ->registerAndUseScript('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.js', ['version' => '2.0.6'], ['defer' => true], ['core', 'plg_system_typographe.compare'])
-            ->registerAndUseStyle('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.css', ['version' => '2.0.6']);
+            ->registerAndUseScript('plg_system_typographe.compare', Uri::root() . 'media/plg_system_typographe/compare.js', ['version' => '2.0.7'], ['defer' => true])
+            ->registerAndUseScript('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.js', ['version' => '2.0.7'], ['defer' => true], ['core', 'plg_system_typographe.compare'])
+            ->registerAndUseStyle('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.css', ['version' => '2.0.7']);
     }
 
     public function check(AjaxEvent $event): void
@@ -160,4 +165,5 @@ final class Typographe extends CMSPlugin implements SubscriberInterface
     }
 
 }
+
 

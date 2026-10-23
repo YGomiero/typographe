@@ -1,4 +1,5 @@
 <?php
+defined('_JEXEC') || define('_JEXEC', 1);
 require dirname(__DIR__) . '/src/Service/Typography.php';
 use Yann\Plugin\System\Typographe\Service\Typography;
 $count=0;

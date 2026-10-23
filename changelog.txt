@@ -1,9 +1,14 @@
+2.0.7 (2026-10-23) — Current release / Version actuelle
+------------------------------------------------------
+FR : les corrections refusées restent refusées à la sauvegarde avec TinyMCE, y compris lors de la conversion LF/CRLF du formulaire. Guides FR/EN actualisés ; 39 tests moteur, 16 tests Joomla et suite JavaScript. Validation navigateur française et anglaise sur Joomla 6.2.0.
+EN: rejected corrections remain rejected when saving through TinyMCE, including form LF/CRLF conversion. Updated FR/EN guides; 39 engine tests, 16 Joomla tests and JavaScript suite. French and English browser validation on Joomla 6.2.0.
+
 2.0.6 (2026-10-23)
 ------------------
 FR : canal natif Joomla vers les versions GitHub stables, validation SHA-256, publication automatique du flux XML via GitHub Actions et documentation de mise à niveau.
 EN: native Joomla update channel for stable GitHub releases, SHA-256 validation, automatic XML feed publishing through GitHub Actions, and upgrade documentation.
 
-2.0.5 (2026-10-23) — Current release / Version actuelle
+2.0.5 (2026-10-23)
 ------------------------------------------------------
 FR
 - Correction à l'édition/enregistrement uniquement, Joomla 6 et PHP 8.3+.
@@ -58,3 +63,5 @@ Changelog Typographe
 ------------------
 - Initial release
 
+
+Packaging 2.0.7 / Paquet 2.0.7 : explicit GPL/MIT notices, direct access guards and removal of unused Hyphenator development tools. See docs/JED-CHECKER.md for the complete audit and checker limitations.

@@ -1,0 +1,1003 @@
+[
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\XmlInfoRule",
+    "data": {
+      "count": {
+        "total": 1,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 1,
+        "passed": 0
+      },
+      "issues": [
+        {
+          "type": "info",
+          "subtype": "INFO_XML",
+          "location": "typographe.xml",
+          "text": "The name tag in this file is: <b>System - Typographe</b><br />Version tag has the value: 2.0.7<br />The creationDate tag has the value: 2026-10",
+          "line": null,
+          "code": null
+        }
+      ]
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\XmlLicenseRule",
+    "data": {
+      "count": {
+        "total": 1,
+        "error": 1,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": [
+        {
+          "type": "error",
+          "subtype": "PH3",
+          "location": "typographe.xml",
+          "text": "COM_JEDCHECKER_ERROR_XML_LICENCE_NOT_FOUND",
+          "line": null,
+          "code": null
+        }
+      ]
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\XmlManifestRule",
+    "data": {
+      "count": {
+        "total": 1,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 1,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": [
+        {
+          "type": "notice",
+          "subtype": "MANIFEST",
+          "location": "typographe.xml",
+          "text": "Node &lt;extension&gt; doesn't contain optional &lt;authorEmail&gt; element",
+          "line": null,
+          "code": null
+        }
+      ]
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\XmlFilesRule",
+    "data": {
+      "count": {
+        "total": 0,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": []
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\XmlUpdateServerRule",
+    "data": {
+      "count": {
+        "total": 1,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 1
+      },
+      "issues": [
+        {
+          "type": "passed",
+          "subtype": "US1",
+          "location": "typographe.xml",
+          "text": "The Update Server link in this XML file is: https://github.com/YGomiero/typographe/releases/latest/download/update.xml",
+          "line": null,
+          "code": null
+        }
+      ]
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\GplRule",
+    "data": {
+      "count": {
+        "total": 86,
+        "error": 0,
+        "warning": 82,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 4
+      },
+      "issues": [
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/autoload.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/ClassLoader.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/InstalledVersions.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/autoload_classmap.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/autoload_files.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/autoload_namespaces.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/autoload_psr4.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/autoload_real.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/autoload_static.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/installed.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/composer/platform_check.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/castor.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Bridge/Symfony/DependencyInjection/Configuration.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Bridge/Symfony/DependencyInjection/JoliTypoExtension.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Bridge/Symfony/JoliTypoBundle.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Bridge/Twig/JoliTypoExtension.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Exception/BadFixerConfigurationException.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Exception/BadRuleSetException.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Exception/InvalidMarkupException.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/FixerInterface.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/BaseOpenClosePair.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/CurlyQuote.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/Dash.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/Dimension.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/Ellipsis.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/EnglishQuotes.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/FrenchNoBreakSpace.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/FrenchQuotes.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/GermanQuotes.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/Hyphen.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/NoSpaceBeforeComma.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/Numeric.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/SmartQuotes.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/SpaceBeforePunctuation.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/Trademark.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/UnicodeNormalization.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer/Unit.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/LocaleAwareFixerInterface.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/LocaleConfig.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/StateBag.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/StateNode.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Autoloader.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Dictionary/Dictionary.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Dictionary/DictionaryRegistry.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Dictionary/Pattern.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Exception.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Exception/InvalidArgumentException.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Exception/NoPatternSetException.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Exception/PathNotDirException.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Exception/PathNotFoundException.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Filter/CustomMarkupFilter.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Filter/Filter.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Filter/FilterRegistry.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Filter/NonStandardFilter.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Filter/SimpleFilter.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Hyphenator.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Options.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/CustomHyphenationTokenizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/EmptyToken.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/ExcludedWordToken.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/NonWordToken.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/PunctuationTokenizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/PunktuationTokenizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/Token.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/TokenRegistry.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/Tokenizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/TokenizerRegistry.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/WhitespaceToken.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/WhitespaceTokenizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/WordToken.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/XmlTokenizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Normalizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Resources/unidata/canonicalComposition.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Resources/unidata/canonicalDecomposition.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Resources/unidata/combiningClass.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Resources/unidata/compatibilityDecomposition.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Resources/unidata/rawCanonicalDecomposition.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Resources/unidata/rawCompatibilityDecomposition.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/bootstrap.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "warning",
+          "subtype": "PH1",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/bootstrap80.php",
+          "text": "COM_JEDCHECKER_GPL_COMPATIBLE_LICENCE_WAS_FOUND",
+          "line": 2,
+          "code": "/** Bundled third-party code. @license MIT License; see the package LICENSE file. */"
+        },
+        {
+          "type": "passed",
+          "subtype": "PH1",
+          "location": "script.php",
+          "text": "COM_JEDCHECKER_PH1_LICENCE_FOUND",
+          "line": 4,
+          "code": " @license GNU General Public License version 3 or later; see LICENSE"
+        },
+        {
+          "type": "passed",
+          "subtype": "PH1",
+          "location": "services/provider.php",
+          "text": "COM_JEDCHECKER_PH1_LICENCE_FOUND",
+          "line": 4,
+          "code": " @license GNU General Public License version 3 or later; see LICENSE"
+        },
+        {
+          "type": "passed",
+          "subtype": "PH1",
+          "location": "src/Extension/Typographe.php",
+          "text": "COM_JEDCHECKER_PH1_LICENCE_FOUND",
+          "line": 4,
+          "code": " @license GNU General Public License version 3 or later; see LICENSE"
+        },
+        {
+          "type": "passed",
+          "subtype": "PH1",
+          "location": "src/Service/Typography.php",
+          "text": "COM_JEDCHECKER_PH1_LICENCE_FOUND",
+          "line": 4,
+          "code": " @license GNU General Public License version 3 or later; see LICENSE"
+        }
+      ]
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\JexecRule",
+    "data": {
+      "count": {
+        "total": 0,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": []
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\FrameworkRule",
+    "data": {
+      "count": {
+        "total": 0,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": []
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\PhpRule",
+    "data": {
+      "count": {
+        "total": 0,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": []
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\SecurityRule",
+    "data": {
+      "count": {
+        "total": 0,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": []
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\ErrorReportingRule",
+    "data": {
+      "count": {
+        "total": 0,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": []
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\EncodingRule",
+    "data": {
+      "count": {
+        "total": 0,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": []
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\JamssRule",
+    "data": {
+      "count": {
+        "total": 6,
+        "error": 0,
+        "warning": 6,
+        "compatibility": 0,
+        "notice": 0,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": [
+        {
+          "type": "warning",
+          "subtype": "Jamss",
+          "location": "dependencies/composer/ClassLoader.php",
+          "text": "<span class='jamss_tooltip info badge bg-warning me-1 mb-1' title='This pattern could be used in highly encoded, malicious code hidden under a loop of code obfuscation function calls. In most cases the decoded hacker code goes through an eval call to execute it. This pattern is also often used for legitimate purposes, e.g. storing configuration information or serialised object data. Please inspect the file manually and compare it with the one in the original extension or Joomla package to verify that this is not a false positive . ' data-bs-toggle=tooltip>?</span> Pattern found#17 - PHP: multiple encoded, most probably obfuscated code found",
+          "line": 497,
+          "code": "        $logicalPathPsr4 = strtr($class, '\\\\', DIRECTORY_SEPARATOR) . $ext;"
+        },
+        {
+          "type": "warning",
+          "subtype": "Jamss",
+          "location": "dependencies/composer/InstalledVersions.php",
+          "text": "<span class='jamss_tooltip info badge bg-warning me-1 mb-1' title='This pattern could be used in highly encoded, malicious code hidden under a loop of code obfuscation function calls. In most cases the decoded hacker code goes through an eval call to execute it. This pattern is also often used for legitimate purposes, e.g. storing configuration information or serialised object data. Please inspect the file manually and compare it with the one in the original extension or Joomla package to verify that this is not a false positive . ' data-bs-toggle=tooltip>?</span> Pattern found#17 - PHP: multiple encoded, most probably obfuscated code found",
+          "line": 339,
+          "code": "            self::$selfDir = strtr(__DIR__, '\\\\', '/');"
+        },
+        {
+          "type": "warning",
+          "subtype": "Jamss",
+          "location": "dependencies/jolicode/jolitypo/src/JoliTypo/Fixer.php",
+          "text": "<span class='jamss_tooltip info badge bg-warning me-1 mb-1' title='Found at least two characters in hexadecimal or octal notation. It doesn&#039;t mean it is malicious, but it could be code hiding behind such notation . ' data-bs-toggle=tooltip>?</span> Pattern found#21 - At least two characters in hexadecimal or octal notation",
+          "line": 23,
+          "code": "    public const string NO_BREAK_THIN_SPACE = \"\\xE2\\x80\\xAF\"; // &#8239;"
+        },
+        {
+          "type": "warning",
+          "subtype": "Jamss",
+          "location": "dependencies/org_heigl/hyphenator/src/Tokenizer/WhitespaceTokenizer.php",
+          "text": "<span class='jamss_tooltip info badge bg-warning me-1 mb-1' title='Found at least two characters in hexadecimal or octal notation. It doesn&#039;t mean it is malicious, but it could be code hiding behind such notation . ' data-bs-toggle=tooltip>?</span> Pattern found#21 - At least two characters in hexadecimal or octal notation",
+          "line": 58,
+          "code": "      \"\\xE2\\x80\\xAF\", // non-breaking thin white space"
+        },
+        {
+          "type": "warning",
+          "subtype": "Jamss",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Normalizer.php",
+          "text": "<span class='jamss_tooltip info badge bg-warning me-1 mb-1' title='This pattern could be used in highly encoded, malicious code hidden under a loop of code obfuscation function calls. In most cases the decoded hacker code goes through an eval call to execute it. This pattern is also often used for legitimate purposes, e.g. storing configuration information or serialised object data. Please inspect the file manually and compare it with the one in the original extension or Joomla package to verify that this is not a false positive . ' data-bs-toggle=tooltip>?</span> Pattern found#17 - PHP: multiple encoded, most probably obfuscated code found",
+          "line": 81,
+          "code": "            $u = unpack('C*', $string);"
+        },
+        {
+          "type": "warning",
+          "subtype": "Jamss",
+          "location": "dependencies/symfony/polyfill-intl-normalizer/Normalizer.php",
+          "text": "<span class='jamss_tooltip info badge bg-warning me-1 mb-1' title='Found at least two characters in hexadecimal or octal notation. It doesn&#039;t mean it is malicious, but it could be code hiding behind such notation . ' data-bs-toggle=tooltip>?</span> Pattern found#21 - At least two characters in hexadecimal or octal notation",
+          "line": 44,
+          "code": "    private static $ASCII = \"\\x20\\x65\\x69\\x61\\x73\\x6E\\x74\\x72\\x6F\\x6C\\x75\\x64\\x5D\\x5B\\x63\\x6D\\x70\\x27\\x0A\\x67\\x7C\\x68\\x76\\x2E\\x66\\x62\\x2C\\x3A\\x3D\\x2D\\x71\\x31\\x30\\x43\\x32\\x2A\\x79\\x78\\x29\\x28\\x4C\\x39\\x41\\x53\\x2F\\x50\\x22\\x45\\x6A\\x4D\\x49\\x6B\\x33\\x3E\\x35\\x54\\x3C\\x44\\x34\\x7D\\x42\\x7B\\x38\\x46\\x77\\x52\\x36\\x37\\x55\\x47\\x4E\\x3B\\x4A\\x7A\\x56\\x23\\x48\\x4F\\x57\\x5F\\x26\\x21\\x4B\\x3F\\x58\\x51\\x25\\x59\\x5C\\x09\\x5A\\x2B\\x7E\\x5E\\x24\\x40\\x60\\x7F\\x00\\x01\\x02\\x03\\x04\\x05\\x06\\x07\\x08\\x0B\\x0C\\x0D\\x0E\\x0F\\x10\\x11\\x12\\x13\\x14\\x15\\x16\\x17\\x18\\x19\\x1A\\x1B\\x1C\\x1D\\x1E\\x1F\";"
+        }
+      ]
+    }
+  },
+  {
+    "rule": "Joomla\\Component\\Jedchecker\\Administrator\\Rule\\Rules\\LanguageRule",
+    "data": {
+      "count": {
+        "total": 2,
+        "error": 0,
+        "warning": 0,
+        "compatibility": 0,
+        "notice": 2,
+        "info": 0,
+        "passed": 0
+      },
+      "issues": [
+        {
+          "type": "notice",
+          "subtype": "",
+          "location": "src/Extension/Typographe.php",
+          "text": "Unknown language key 'PLG_SYSTEM_TYPOGRAPHE_ERROR' found in the code.",
+          "line": 75,
+          "code": "            $this->getApplication()->enqueueMessage(Text::_('PLG_SYSTEM_TYPOGRAPHE_ERROR'), 'error');"
+        },
+        {
+          "type": "notice",
+          "subtype": "",
+          "location": "src/Extension/Typographe.php",
+          "text": "Unknown language key 'PLG_SYSTEM_TYPOGRAPHE_ERROR' found in the code.",
+          "line": 158,
+          "code": "            throw new \\InvalidArgumentException(Text::_('PLG_SYSTEM_TYPOGRAPHE_ERROR'), 400);"
+        }
+      ]
+    }
+  }
+]

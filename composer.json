@@ -1,0 +1,13 @@
+{
+    "name": "ygomiero/typographe",
+    "description": "Save-time typography and administrator review for Joomla 6",
+    "type": "joomla-plugin",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "php": ">=8.3",
+        "ext-dom": "*",
+        "ext-mbstring": "*",
+        "jolicode/jolitypo": "^1.8"
+    },
+    "config": {"vendor-dir": "dependencies", "sort-packages": true}
+}

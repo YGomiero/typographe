@@ -1,5 +1,43 @@
+2.0.5 (2026-10-23) — Current release / Version actuelle
+------------------------------------------------------
+FR
+- Correction à l'édition/enregistrement uniquement, Joomla 6 et PHP 8.3+.
+- Articles, descriptions de catégories, modules HTML et titres optionnels.
+- Aperçu HTML/source ; clic sur chaque modification pour accepter/refuser.
+- Bouton « Appliquer les corrections retenues », annulation et protection contre les aperçus obsolètes.
+- Choix manuels respectés pour la révision exacte enregistrée, même en mode automatique.
+- Normalisation Unicode NFC et espacement selon la langue, désactivables.
+- Interfaces et guides complets en français et en anglais.
+- JoliTypo 1.8.0 et dépendances verrouillées ; anciens fichiers retirés lors de la mise à niveau.
+- 39 tests moteur, 14 tests Joomla, suite JavaScript et validation navigateur locale.
+
+EN
+- Editing/save-time correction only, Joomla 6 and PHP 8.3+.
+- Articles, category descriptions, custom HTML modules and optional titles.
+- HTML/source preview; click each change to accept/reject it.
+- Apply selected corrections, undo, and stale-preview protection.
+- Manual decisions honored for the exact saved revision, including in automatic mode.
+- Configurable NFC Unicode normalization and language-aware spacing.
+- Complete French and English interfaces and guides.
+- Pinned JoliTypo 1.8.0 dependencies; obsolete files removed during upgrade.
+- 39 engine tests, 14 Joomla tests, JavaScript suite and local browser validation.
+
+Versions 2.0.0–2.0.4 were local development iterations / itérations de développement locales.
+
 Changelog Typographe
 =====================
+
+2.0.0 (2026-10-23)
+------------------
+- Joomla 6 namespaced services and typed events; PHP 8.3 minimum.
+- Removed display-time correction; lazy engine loading exclusively for editing.
+- Automatic form-save correction and administrator review/apply/undo.
+- Articles, category descriptions and custom HTML modules; optional titles.
+- Complete French and English interfaces; content-language typography selection.
+- CSRF and edit/create ACL checks, bounded input, safe source preview.
+- Protected HTML/code/URLs/Joomla tags; opt-out blocks; hyphenation opt-in.
+- JoliTypo 0.2 -> 1.8 with Composer lockfile, dependency audit and regression tests.
+- Legacy update server removed pending publication of the new release.
 
 1.0.2 (2022-07-31)
 ------------------

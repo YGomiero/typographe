@@ -1,148 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" version="3.7" group="system" method="upgrade">
-	<name>PLG_TYPOGRAPHE_NAME</name>
-	<author>Le typographe</author>
-	<creationDate>June 2022</creationDate>
-	<copyright>Copyright 2018-2022 Yann Gomiero and Jolicode . All rights reserved.</copyright>
-    <license>GNU/GPL Version 2 or later</license>
-	<authorEmail>contact@distro.fr</authorEmail>
-	<authorUrl>distro.fr</authorUrl>
-	<version>1.0.2</version>
-	<description>PLG_TYPOGRAPHE_DESC</description>
-    <scriptfile>script.php</scriptfile>
-	<files>
-		<folder>vendor</folder>
-		<filename plugin="typographe">typographe.php</filename>
-		<folder>language</folder>
-	</files>
-	
-	<config>
-		<fields name="params">
-		    <fieldset name="basic">
-			<field
-					type="spacer"
-					name="base_header_note"
-					label="PLG_TYPOGRAPHE_HEADER_NOTE"
-			/>
-			<field
-					type="text"
-					name="setlocale"
-					label="setLocale"
-					default="fr_FR"
-			/>
-			<field
-					type="spacer"
-					name="base_params_note"
-					label="PLG_TYPOGRAPHE_PARAMS_NOTE"
-			/>
-			<field 
-					name="ellipsis" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_ELLIPSIS" 
-					description="PLG_TYPOGRAPHE_ELLIPSIS_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-
-			<field 
-					name="dimension" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_DIMENSION" 
-					description="PLG_TYPOGRAPHE_DIMENSION_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-
-			<field 
-					name="unit" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_UNIT" 
-					description="PLG_TYPOGRAPHE_UNIT_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			<field 
-					name="dash" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_DASH" 
-					description="PLG_TYPOGRAPHE_DASH_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			<field 
-					name="smartquotes" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_SMARTQUOTES" 
-					description="PLG_TYPOGRAPHE_SMARTQUOTES_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			<field 
-					name="frenchnobreakspace" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_FRENCHNOBREAKSPACE" 
-					description="PLG_TYPOGRAPHE_FRENCHNOBREAKSPACE_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			<field 
-					name="nospacebeforecomma" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_NOSPACEBEFORECOMMA" 
-					description="PLG_TYPOGRAPHE_NOSPACEBEFORECOMMA_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			<field 
-					name="curlyquote" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_CURLYQUOTE" 
-					description="PLG_TYPOGRAPHE_CURLYQUOTE_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			<field 
-					name="hyphen" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_HYPHEN" 
-					description="PLG_TYPOGRAPHE_HYPHEN_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-			<field 
-					name="trademark" 
-					type="radio" 
-					default="1" 
-					label="PLG_TYPOGRAPHE_TRADEMARK" 
-					description="PLG_TYPOGRAPHE_TRADEMARK_DESC"
-					class="btn-group btn-group-yesno">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>				
-			</fieldset>			
-		</fields>
-	</config>
-	
-	  <updateservers>
-    <server type="extension" name="Typographe Update Site">https://raw.githubusercontent.com/YGomiero/Typographe-Update-Server-for-Joomla/master/version.xml</server>
-    </updateservers>
-
-	</extension>
+<extension type="plugin" group="system" method="upgrade">
+ <name>PLG_SYSTEM_TYPOGRAPHE_NAME</name>
+ <author>Yann Gomiero</author><creationDate>2026-10</creationDate>
+ <copyright>Copyright Yann Gomiero; JoliTypo contributors</copyright>
+ <license>GPL-3.0-or-later</license><version>2.0.5</version>
+ <description>PLG_SYSTEM_TYPOGRAPHE_DESC</description>
+ <namespace path="src">Yann\Plugin\System\Typographe</namespace>
+ <scriptfile>script.php</scriptfile>
+ <files><folder plugin="typographe">services</folder><folder>src</folder><folder>dependencies</folder><folder>language</folder><filename>LICENSE</filename></files>
+ <media destination="plg_system_typographe" folder="media"><filename>editor.js</filename><filename>compare.js</filename><filename>editor.css</filename></media>
+ <languages folder="language"><language tag="en-GB">en-GB/plg_system_typographe.ini</language><language tag="en-GB">en-GB/plg_system_typographe.sys.ini</language><language tag="fr-FR">fr-FR/plg_system_typographe.ini</language><language tag="fr-FR">fr-FR/plg_system_typographe.sys.ini</language></languages>
+ <config><fields name="params"><fieldset name="basic"><field name="automatic" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_AUTOMATIC" description="PLG_SYSTEM_TYPOGRAPHE_AUTOMATIC_DESC"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="titles" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_TITLES"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="categories" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_CATEGORIES"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="modules" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_MODULES"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="setlocale" type="list" default="fr_FR" label="PLG_SYSTEM_TYPOGRAPHE_LOCALE" description="PLG_SYSTEM_TYPOGRAPHE_LOCALE_DESC"><option value="fr_FR">Français (France)</option><option value="fr_CA">Français (Canada)</option><option value="en_GB">English (United Kingdom)</option><option value="en_US">English (United States)</option></field></fieldset><fieldset name="rules" label="PLG_SYSTEM_TYPOGRAPHE_RULES"><field name="unicodenormalization" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_UNICODE" description="PLG_SYSTEM_TYPOGRAPHE_UNICODE_DESC"><option value="0">JNO</option><option value="1">JYES</option></field><field name="smartquotes" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_SMARTQUOTES"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="curlyquote" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_CURLYQUOTE"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="ellipsis" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_ELLIPSIS"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="dimension" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_DIMENSION"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="unit" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_UNIT"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="dash" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_DASH"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="frenchnobreakspace" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_SPACING" description="PLG_SYSTEM_TYPOGRAPHE_SPACING_DESC"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="nospacebeforecomma" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_NOSPACEBEFORECOMMA"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="hyphen" type="radio" layout="joomla.form.field.radio.switcher" default="0" label="PLG_SYSTEM_TYPOGRAPHE_HYPHEN"><option value="0">JNO</option><option value="1">JYES</option></field>
+<field name="trademark" type="radio" layout="joomla.form.field.radio.switcher" default="1" label="PLG_SYSTEM_TYPOGRAPHE_TRADEMARK"><option value="0">JNO</option><option value="1">JYES</option></field>
+</fieldset></fields></config></extension>

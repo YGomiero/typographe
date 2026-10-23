@@ -17,8 +17,6 @@ Powered by [JoliTypo](https://github.com/jolicode/JoliTypo) **1.8.0**, with Hyph
 
 ![Typographe — Review. Choose. Apply.](docs/00-overview-ai.png)
 
-Editorial illustration generated with ChatGPT / Illustration éditoriale générée avec ChatGPT.
-
 [Illustrated English guide](docs/README.en.md#screenshots) · [Guide français illustré](docs/README.fr.md#captures)
 
 ## Development / Développement

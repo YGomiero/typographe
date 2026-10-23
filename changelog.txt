@@ -1,4 +1,9 @@
-2.0.7 (2026-10-23) — Current release / Version actuelle
+2.0.8 (2026-10-23) — Current release / Version actuelle
+----------------------------------------
+FR : ajout du contact public extensions@gomiero.me au manifeste et aux guides ; contrôle indépendant des licences, des dépendances et des traductions du paquet.
+EN: added public contact extensions@gomiero.me to the manifest and guides; independent package license, dependency and translation checks.
+
+2.0.7 (2026-10-23)
 ------------------------------------------------------
 FR : les corrections refusées restent refusées à la sauvegarde avec TinyMCE, y compris lors de la conversion LF/CRLF du formulaire. Guides FR/EN actualisés ; 39 tests moteur, 16 tests Joomla et suite JavaScript. Validation navigateur française et anglaise sur Joomla 6.2.0.
 EN: rejected corrections remain rejected when saving through TinyMCE, including form LF/CRLF conversion. Updated FR/EN guides; 39 engine tests, 16 Joomla tests and JavaScript suite. French and English browser validation on Joomla 6.2.0.
@@ -65,3 +70,4 @@ Changelog Typographe
 
 
 Packaging 2.0.7 / Paquet 2.0.7 : explicit GPL/MIT notices, direct access guards and removal of unused Hyphenator development tools. See docs/JED-CHECKER.md for the complete audit and checker limitations.
+

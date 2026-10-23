@@ -1,6 +1,6 @@
 <?php
 $root=dirname(__DIR__);
-$out=$argv[1] ?? $root.'/plg_system_typographe-2.0.7.zip';
+$out=$argv[1] ?? $root.'/plg_system_typographe-2.0.8.zip';
 if (!is_file($root.'/dependencies/autoload.php')) throw new RuntimeException('Run composer install first.');
 $zip=new ZipArchive;
 if ($zip->open($out,ZipArchive::CREATE|ZipArchive::OVERWRITE)!==true) throw new RuntimeException('Cannot create ZIP.');

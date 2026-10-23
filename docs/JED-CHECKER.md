@@ -1,4 +1,14 @@
-# Typographe 2.0.7 — JED Checker
+# Typographe — JED Checker
+
+## 2.0.8 — 2026-10-23
+
+FR : ajout du contact public `extensions@gomiero.me`. La notice authorEmail a disparu. Résultat brut : **1 faux positif PH3, 88 avertissements tiers, 2 notices de traduction**. Les règles du contrôleur sont inchangées. Les 448 vérifications indépendantes du paquet passent : 217 fichiers tiers comparés aux sources Composer locales et 51 clés de traduction dans chaque langue.
+
+EN: added public contact `extensions@gomiero.me`. The authorEmail notice is resolved. Raw result: **1 PH3 false positive, 88 third-party warnings, 2 language notices**. Checker rules are unchanged. All 448 independent package checks pass: 217 dependency files compared with local Composer sources and 51 translation keys per language.
+
+[Résultat 2.0.8 / 2.0.8 results](jed-checker-2.0.8.json). Reproduce: `php tests/package-audit.php /path/to/plg_system_typographe-2.0.8.zip`.
+
+## Historique / History: 2.0.7
 
 ## Français
 

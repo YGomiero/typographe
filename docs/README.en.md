@@ -1,11 +1,11 @@
-# Typographe 2.0.7 — English guide
+# Typographe 2.0.8 — English guide
 
 [Home](../README.md) · [Français](README.fr.md)
 
 ## Installation and upgrades
 
 1. Back up your site before upgrading.
-2. Download `plg_system_typographe-2.0.7.zip` from [GitHub releases](https://github.com/YGomiero/typographe/releases/tag/2.0.7).
+2. Download `plg_system_typographe-2.0.8.zip` from [GitHub releases](https://github.com/YGomiero/typographe/releases/tag/2.0.8).
 3. Install the ZIP through Joomla: **System → Install → Extensions**.
 4. Enable **System - Typographe** and review its settings.
 
@@ -37,7 +37,7 @@ Rendered preview preserves text structure without template styles, external medi
 
 **Automatically correct on save** is enabled by default. Disable it for a manual-only workflow.
 
-An applied manual selection overrides automatic correction **for the exact revision submitted in that save**: rejected changes are not reapplied. Version 2.0.7 also recognizes TinyMCE HTML serialization and form line endings, so they no longer cause rejected changes to be reapplied. Rejections are not permanent exclusions. Check again or disable automatic mode if you edit the text afterwards or reopen it for another editing session. Undoing an application does not disable automatic mode.
+An applied manual selection overrides automatic correction **for the exact revision submitted in that save**: rejected changes are not reapplied. Version 2.0.8 also recognizes TinyMCE HTML serialization and form line endings, so they no longer cause rejected changes to be reapplied. Rejections are not permanent exclusions. Check again or disable automatic mode if you edit the text afterwards or reopen it for another editing session. Undoing an application does not disable automatic mode.
 
 ## Language and rules
 
@@ -64,7 +64,7 @@ HTML tags and attributes, comments, `pre`, `code`, `script`, `style`, `textarea`
 
 Quotes spanning multiple HTML tags may need manual correction. Custom fields, metadata descriptions and third-party components are not integrated in this release. The review endpoint requires an administrator session, POST, a CSRF token and create/edit permissions; it does not save data. Input limits: 1 MB of body text and 10 KB of title text.
 
-Since 2.0.6, Joomla detects stable GitHub releases through its native update manager. Install 2.0.7 once to register the channel, then use System → Update → Extensions. Detection is automatic; installation is started by the administrator without manually downloading the ZIP. Joomla content history can help restore changes when enabled, but does not replace a backup.
+Since 2.0.6, Joomla detects stable GitHub releases through its native update manager. Install 2.0.8 once to register the channel, then use System → Update → Extensions. Detection is automatic; installation is started by the administrator without manually downloading the ZIP. Joomla content history can help restore changes when enabled, but does not replace a backup.
 
 ## Validation and dependencies
 
@@ -74,4 +74,6 @@ JoliTypo 1.8.0, Hyphenator 3.2.0 and Symfony Intl Normalizer polyfill 1.43.0 are
 
 ## JED Checker
 
-[Rapport français / English audit report](JED-CHECKER.md) — 2.0.7, Joomla 6.2.0.
+[Rapport français / English audit report](JED-CHECKER.md) — 2.0.8, Joomla 6.2.0.
+
+Contact / Support: [extensions@gomiero.me](mailto:extensions@gomiero.me)

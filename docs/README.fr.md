@@ -72,10 +72,6 @@ Depuis la version 2.0.6, Joomla détecte les versions GitHub stables via son ges
 
 JoliTypo 1.8.0, Hyphenator 3.2.0 et le polyfill Symfony Intl Normalizer 1.43.0 sont verrouillés par Composer. Les instructions de construction et de test figurent dans le [README principal](../README.md).
 
-## JED Checker
-
-[Rapport français / English audit report](JED-CHECKER.md) — 2.0.8, Joomla 6.2.0.
-
 Contact / Support: [extensions@gomiero.me](mailto:extensions@gomiero.me)
 
 ## Captures

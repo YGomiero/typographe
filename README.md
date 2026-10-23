@@ -55,8 +55,4 @@ python tools/update-feed.py plg_system_typographe-X.Y.Z.zip X.Y.Z update.xml
 ```
 Attach the generated `update.xml` to the same release / Joindre le XML généré à cette même version.
 
-## JED Checker
-
-[Rapport français / English audit report](docs/JED-CHECKER.md) — 2.0.8, Joomla 6.2.0.
-
 Contact / Support: [extensions@gomiero.me](mailto:extensions@gomiero.me)

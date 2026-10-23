@@ -69,5 +69,5 @@ Changelog Typographe
 - Initial release
 
 
-Packaging 2.0.7 / Paquet 2.0.7 : explicit GPL/MIT notices, direct access guards and removal of unused Hyphenator development tools. See docs/JED-CHECKER.md for the complete audit and checker limitations.
+Packaging 2.0.7 / Paquet 2.0.7 : explicit GPL/MIT notices, direct access guards and removal of unused Hyphenator development tools.
 

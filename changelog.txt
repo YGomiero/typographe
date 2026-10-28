@@ -1,7 +1,7 @@
 2.0.8 (2026-10-23) — Current release / Version actuelle
 ----------------------------------------
-FR : ajout du contact public extensions@gomiero.me au manifeste et aux guides ; contrôle indépendant des licences, des dépendances et des traductions du paquet.
-EN: added public contact extensions@gomiero.me to the manifest and guides; independent package license, dependency and translation checks.
+FR : ajout des coordonnées de l’auteur au manifeste XML ; support via les issues GitHub (https://github.com/YGomiero/typographe/issues) ; contrôle indépendant des licences, des dépendances et des traductions du paquet.
+EN: added author contact details to the XML manifest; support via GitHub Issues (https://github.com/YGomiero/typographe/issues); independent package license, dependency and translation checks.
 
 2.0.7 (2026-10-23)
 ------------------------------------------------------

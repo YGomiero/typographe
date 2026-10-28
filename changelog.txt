@@ -1,4 +1,9 @@
-2.0.8 (2026-10-23) — Current release / Version actuelle
+2.0.9 (2026-10-28) — Current release / Version actuelle
+------------------------------------------------------
+FR : correction des retours à la ligne artificiels dans l’aperçu des articles longs ; comparaison tenant compte des césures invisibles et sélection séparée des mots ; explications et libellés accessibles FR/EN. Le moteur typographique et les paramètres existants sont conservés. Merci à RobertG pour le signalement.
+EN: fixed artificial line breaks in long-article previews; comparison now recognizes invisible discretionary hyphens and keeps words individually selectable; added French/English explanations and accessible labels. The typography engine and existing settings are unchanged. Thanks to RobertG for the report.
+
+2.0.8 (2026-10-23)
 ----------------------------------------
 FR : ajout des coordonnées de l’auteur au manifeste XML ; support via les issues GitHub (https://github.com/YGomiero/typographe/issues) ; contrôle indépendant des licences, des dépendances et des traductions du paquet.
 EN: added author contact details to the XML manifest; support via GitHub Issues (https://github.com/YGomiero/typographe/issues); independent package license, dependency and translation checks.

@@ -2,25 +2,44 @@
 ((root) => {
   'use strict';
   function ranges(a, b) {
-    const tokenize = s => [...s.matchAll(/&(?:#[0-9]+|#x[0-9a-f]+|[a-z][a-z0-9]+);|[\p{L}\p{N}]+|[^\p{L}\p{N}]/giu)].map(m => ({v:m[0], p:m.index}));
+    // Keep discretionary hyphens inside their word. They change its typography,
+    // not its identity, and must not turn a long article into one large edit.
+    const tokenize = s => [...s.matchAll(/&(?:#[0-9]+|#x[0-9a-f]+|[a-z][a-z0-9]+);|[\p{L}\p{N}]+(?:\u00ad[\p{L}\p{N}]+)*|[^\p{L}\p{N}]/giu)].map(m => ({v:m[0], key:m[0].replaceAll('\u00ad',''), p:m.index}));
     const x = tokenize(a), y = tokenize(b), left = [], right = [];
-    let start = 0, xe = x.length, ye = y.length;
-    while (start < xe && start < ye && x[start].v === y[start].v) start++;
-    while (xe > start && ye > start && x[xe-1].v === y[ye-1].v) { xe--; ye--; }
     const add = (out,t,i) => out.push([t[i].p,t[i].p+t[i].v.length]);
+    const matched = (i,j) => { if(x[i].v!==y[j].v) {add(left,x,i);add(right,y,j);} };
+    let start = 0, xe = x.length, ye = y.length;
+    while (start < xe && start < ye && x[start].key === y[start].key) {matched(start,start);start++;}
+    while (xe > start && ye > start && x[xe-1].v === y[ye-1].v) { xe--; ye--; }
     if ((xe-start)*(ye-start) > 1000000) {
-      if (xe > start) left.push([x[start].p,x[xe-1].p+x[xe-1].v.length]);
-      if (ye > start) right.push([y[start].p,y[ye-1].p+y[ye-1].v.length]);
+      // Bounded lookahead keeps nearby corrections separate without allocating
+      // a quadratic table. Every skipped token remains an explicit edit.
+      let i=start,j=start;
+      while(i<xe && j<ye) {
+        if(x[i].key===y[j].key) {matched(i++,j++);continue;}
+        const next=new Map();
+        for(let n=j;n<Math.min(j+64,ye);n++) if(!next.has(y[n].key)) next.set(y[n].key,n);
+        let ai=-1,aj=-1,cost=Infinity;
+        for(let n=i;n<Math.min(i+64,xe);n++) {
+          const m=next.get(x[n].key);
+          if(m!==undefined && n-i+m-j<cost) {ai=n;aj=m;cost=n-i+m-j;}
+        }
+        if(ai<0) break;
+        while(i<ai) add(left,x,i++);
+        while(j<aj) add(right,y,j++);
+      }
+      while(i<xe) add(left,x,i++);
+      while(j<ye) add(right,y,j++);
       return [left,right];
     }
     const width = ye-start+1, table = new Uint32Array((xe-start+1)*width);
     for (let i=xe-1;i>=start;i--) for (let j=ye-1;j>=start;j--) {
       const p=(i-start)*width+j-start;
-      table[p]=x[i].v===y[j].v ? 1+table[p+width+1] : Math.max(table[p+width],table[p+1]);
+      table[p]=x[i].key===y[j].key ? 1+table[p+width+1] : Math.max(table[p+width],table[p+1]);
     }
     let i=start,j=start;
     while(i<xe || j<ye) {
-      if(i<xe && j<ye && x[i].v===y[j].v) {i++;j++;}
+      if(i<xe && j<ye && x[i].key===y[j].key) {matched(i++,j++);}
       else if(i<xe && (j===ye || table[(i-start+1)*width+j-start]>=table[(i-start)*width+j-start+1])) add(left,x,i++);
       else add(right,y,j++);
     }

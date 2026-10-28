@@ -1,11 +1,11 @@
-# Typographe 2.0.8 — English guide
+# Typographe 2.0.9 — English guide
 
 [Home](../README.md) · [Français](README.fr.md)
 
 ## Installation and upgrades
 
 1. Back up your site before upgrading.
-2. Download `plg_system_typographe-2.0.8.zip` from [GitHub releases](https://github.com/YGomiero/typographe/releases/tag/2.0.8).
+2. Download `plg_system_typographe-2.0.9.zip` from [GitHub releases](https://github.com/YGomiero/typographe/releases/tag/2.0.9).
 3. Install the ZIP through Joomla: **System → Install → Extensions**.
 4. Enable **System - Typographe** and review its settings.
 
@@ -33,11 +33,15 @@ The preview and individual clicks do not change the editor or database. **Close 
 
 Rendered preview preserves text structure without template styles, external media or executable elements. Comparison markers are never saved. Adjacent changed characters form one correction; very large complex differences may be grouped to bound processing cost.
 
+### Hyphenation and apparently unchanged words
+
+Discretionary hyphenation inserts an invisible character (U+00AD) that permits a word to break at the end of a line. A highlighted word can therefore keep exactly the same spelling. Since 2.0.9, the preview explains these changes and keeps hyphenated words individually selectable in long articles. Highlights flow with the text without introducing artificial line breaks. Reject the suggestion or disable **Discretionary hyphenation** to avoid adding these break opportunities.
+
 ## Automatic mode and manual decisions
 
 **Automatically correct on save** is enabled by default. Disable it for a manual-only workflow.
 
-An applied manual selection overrides automatic correction **for the exact revision submitted in that save**: rejected changes are not reapplied. Version 2.0.8 also recognizes TinyMCE HTML serialization and form line endings, so they no longer cause rejected changes to be reapplied. Rejections are not permanent exclusions. Check again or disable automatic mode if you edit the text afterwards or reopen it for another editing session. Undoing an application does not disable automatic mode.
+An applied manual selection overrides automatic correction **for the exact revision submitted in that save**: rejected changes are not reapplied. Typographe also recognizes TinyMCE HTML serialization and form line endings, so they no longer cause rejected changes to be reapplied. Rejections are not permanent exclusions. Check again or disable automatic mode if you edit the text afterwards or reopen it for another editing session. Undoing an application does not disable automatic mode.
 
 ## Language and rules
 
@@ -64,11 +68,11 @@ HTML tags and attributes, comments, `pre`, `code`, `script`, `style`, `textarea`
 
 Quotes spanning multiple HTML tags may need manual correction. Custom fields, metadata descriptions and third-party components are not integrated in this release. The review endpoint requires an administrator session, POST, a CSRF token and create/edit permissions; it does not save data. Input limits: 1 MB of body text and 10 KB of title text.
 
-Since 2.0.6, Joomla detects stable GitHub releases through its native update manager. Install 2.0.8 once to register the channel, then use System → Update → Extensions. Detection is automatic; installation is started by the administrator without manually downloading the ZIP. Joomla content history can help restore changes when enabled, but does not replace a backup.
+Since 2.0.6, Joomla detects stable GitHub releases through its native update manager. Install 2.0.9 once to register the channel, then use System → Update → Extensions. Detection is automatic; installation is started by the administrator without manually downloading the ZIP. Joomla content history can help restore changes when enabled, but does not replace a backup.
 
 ## Validation and dependencies
 
-39 engine tests, 16 Joomla integration tests and a JavaScript comparison/selection suite. Browser checks on Joomla 6.2.0 / PHP 8.3.30 cover preview, mouse/keyboard toggling, apply/undo, a save preserving rejected corrections, and Unicode normalization with protected code.
+39 engine tests, 19 hyphenation regression checks, 16 Joomla integration tests and a JavaScript comparison/selection suite covering long articles and 100 reproducible randomized cases. Browser checks on Joomla 6.2.0 / PHP 8.3.30 cover preview, mouse/keyboard toggling, apply/undo, a save preserving rejected corrections, and Unicode normalization with protected code.
 
 JoliTypo 1.8.0, Hyphenator 3.2.0 and Symfony Intl Normalizer polyfill 1.43.0 are pinned by Composer. See the [main README](../README.md) for build and test commands.
 

@@ -96,7 +96,7 @@ final class Typographe extends CMSPlugin implements SubscriberInterface
         if (!$kind) { return; }
         $this->loadLanguage();
         $document = $app->getDocument();
-        foreach (['CHECK','APPLY','UNDO','CLOSE','BEFORE','AFTER','CLEAN','CHANGED','ERROR','STALE','APPLIED','UNDONE','BUSY','TITLE','BODY','HELP','RENDERED','SOURCE','HIGHLIGHT','ACCEPT','REJECT','ACCEPT_ALL','REJECT_ALL','SELECTED','CORRECTIONS','CHOICE_HELP','CLICK_HELP'] as $key) {
+        foreach (['CHECK','APPLY','UNDO','CLOSE','BEFORE','AFTER','CLEAN','CHANGED','ERROR','STALE','APPLIED','UNDONE','BUSY','TITLE','BODY','HELP','RENDERED','SOURCE','HIGHLIGHT','ACCEPT','REJECT','ACCEPT_ALL','REJECT_ALL','SELECTED','CORRECTIONS','CHOICE_HELP','CLICK_HELP','HYPHEN_HELP','HYPHEN_CHANGE'] as $key) {
             Text::script('PLG_SYSTEM_TYPOGRAPHE_' . $key);
         }
         $document->addScriptOptions('typographe', [
@@ -105,9 +105,9 @@ final class Typographe extends CMSPlugin implements SubscriberInterface
             'kind' => $kind, 'field' => 'jform_' . $field,
         ]);
         $document->getWebAssetManager()
-            ->registerAndUseScript('plg_system_typographe.compare', Uri::root() . 'media/plg_system_typographe/compare.js', ['version' => '2.0.8'], ['defer' => true])
-            ->registerAndUseScript('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.js', ['version' => '2.0.8'], ['defer' => true], ['core', 'plg_system_typographe.compare'])
-            ->registerAndUseStyle('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.css', ['version' => '2.0.8']);
+            ->registerAndUseScript('plg_system_typographe.compare', Uri::root() . 'media/plg_system_typographe/compare.js', ['version' => '2.0.9'], ['defer' => true])
+            ->registerAndUseScript('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.js', ['version' => '2.0.9'], ['defer' => true], ['core', 'plg_system_typographe.compare'])
+            ->registerAndUseStyle('plg_system_typographe.editor', Uri::root() . 'media/plg_system_typographe/editor.css', ['version' => '2.0.9']);
     }
 
     public function check(AjaxEvent $event): void

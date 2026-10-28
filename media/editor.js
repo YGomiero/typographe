@@ -56,7 +56,10 @@
           const originalResult={...result};
           const corrections=[...diff.edits(snapshot.title,result.title).map(c=>({...c,field:'title'})),
             ...diff.edits(snapshot.text,result.text).map(c=>({...c,field:'text'}))];
-          corrections.forEach(c=>{c.accepted=true;});
+          corrections.forEach(c=>{
+            c.accepted=true;
+            c.hyphenation=c.before.replaceAll('\u00ad','')===c.after.replaceAll('\u00ad','');
+          });
           let sourceMode=false;
           const selection=el('div',null,'typographe-selection');
           const count=el('p'); count.setAttribute('role','status');
@@ -70,6 +73,7 @@
 
 
           selection.append(el('p',t('CLICK_HELP')),count);
+          if(corrections.some(c=>c.hyphenation)) selection.append(el('p',t('HYPHEN_HELP')));
           const interactive = (fieldName,source) => {
             const original=snapshot[fieldName], changes=corrections.map((c,id)=>({...c,id})).filter(c=>c.field===fieldName);
             const markers={}; let html='',cursor=0;
@@ -92,8 +96,9 @@
               const id=Number(mark.dataset.correction),c=corrections[id];
               mark.className='typographe-toggle';mark.dataset.accepted=String(c.accepted);
               mark.setAttribute('role','button');mark.tabIndex=0;mark.setAttribute('aria-pressed',String(c.accepted));
-              mark.setAttribute('aria-label',t(c.accepted?'REJECT':'ACCEPT')+' '+(id+1));
-              mark.title=t(c.accepted?'REJECT':'ACCEPT')+' '+(id+1);
+              const label=t(c.accepted?'REJECT':'ACCEPT')+' '+(id+1)+(c.hyphenation?' — '+t('HYPHEN_CHANGE'):'');
+              mark.setAttribute('aria-label',label);
+              mark.title=label;
               if(!mark.textContent) mark.textContent='∅';
               const toggle=()=>{c.accepted=!c.accepted;update();grid.querySelector('[data-correction="'+id+'"]')?.focus({preventScroll:true});};
               mark.addEventListener('click',toggle);

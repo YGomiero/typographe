@@ -26,7 +26,7 @@ check((new Typography(array_fill_keys(array_keys(Typography::RULES),0)))->fix($s
 check($s->fix('<a href="https://x.test?a=1&amp;b=2" title="a > b...">test...</a>')==='<a href="https://x.test?a=1&amp;b=2" title="a > b...">test…</a>','Quoted tag greater-than');
 foreach (['en-GB','fr-FR'] as $lang) {
   $ini=parse_ini_file(dirname(__DIR__)."/language/$lang/plg_system_typographe.ini");
-  check(is_array($ini) && count($ini)===51, 'Translations '.$lang);
+  check(is_array($ini) && count($ini)===53, 'Translations '.$lang);
 }
 check($s->fixPlain('Arts & culture...')==='Arts & culture…','Plain title ampersand');
 check($s->fix('<pre>test...')==='<pre>test...','Unclosed protected tag');

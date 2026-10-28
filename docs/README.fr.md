@@ -1,11 +1,11 @@
-# Typographe 2.0.8 — Guide français
+# Typographe 2.0.9 — Guide français
 
 [Accueil](../README.md) · [English](README.en.md)
 
 ## Installation et mise à niveau
 
 1. Sauvegarder le site avant toute mise à niveau.
-2. Télécharger `plg_system_typographe-2.0.8.zip` depuis les [versions GitHub](https://github.com/YGomiero/typographe/releases/tag/2.0.8).
+2. Télécharger `plg_system_typographe-2.0.9.zip` depuis les [versions GitHub](https://github.com/YGomiero/typographe/releases/tag/2.0.9).
 3. Installer le ZIP dans Joomla : **Système → Installation → Extensions**.
 4. Activer **Système - Typographe** dans les plugins et vérifier ses paramètres.
 
@@ -33,11 +33,15 @@ L’aperçu et les clics seuls ne modifient pas l’éditeur ni la base. **Ferme
 
 Le rendu conserve la structure du texte, sans les styles du template, médias externes ni éléments exécutables. Les marques de comparaison ne sont jamais enregistrées. Des caractères modifiés contigus forment une correction ; de très grandes différences complexes peuvent être regroupées pour limiter le calcul.
 
+### Césures et mots apparemment inchangés
+
+La césure conditionnelle ajoute un caractère invisible (U+00AD) qui permet de couper un mot en fin de ligne. Par exemple, « exercice » peut être surligné sans changement d’orthographe. Depuis la version 2.0.9, ces propositions sont expliquées dans l’aperçu et restent sélectionnables mot par mot sur les articles longs. Le surlignage suit le texte sans provoquer de retour à la ligne artificiel. Refuser la proposition ou désactiver la règle **Césure conditionnelle** pour ne pas ajouter ces coupures.
+
 ## Mode automatique et décisions manuelles
 
 **Corriger automatiquement à l’enregistrement** est activé par défaut. Pour un fonctionnement uniquement manuel, désactiver cette option.
 
-Une sélection manuelle appliquée prime sur le mode automatique **pour la révision exacte soumise lors de cet enregistrement** : une correction refusée n’est pas réappliquée. La version 2.0.8 reconnaît aussi la sérialisation HTML de TinyMCE et les retours à la ligne du formulaire : ils ne déclenchent plus la réapplication des corrections refusées. Les refus ne sont pas des exclusions permanentes. Si le texte est modifié ensuite ou rouvert pour une autre édition, vérifier à nouveau ou désactiver le mode automatique. Annuler une application ne désactive pas l’automatisme.
+Une sélection manuelle appliquée prime sur le mode automatique **pour la révision exacte soumise lors de cet enregistrement** : une correction refusée n’est pas réappliquée. Typographe reconnaît aussi la sérialisation HTML de TinyMCE et les retours à la ligne du formulaire : ils ne déclenchent plus la réapplication des corrections refusées. Les refus ne sont pas des exclusions permanentes. Si le texte est modifié ensuite ou rouvert pour une autre édition, vérifier à nouveau ou désactiver le mode automatique. Annuler une application ne désactive pas l’automatisme.
 
 ## Langue et règles
 
@@ -64,11 +68,11 @@ Les balises HTML et leurs attributs, commentaires, blocs `pre`, `code`, `script`
 
 Les guillemets répartis sur plusieurs balises nécessitent parfois une correction manuelle. Les champs personnalisés, méta-descriptions et composants tiers ne sont pas intégrés dans cette version. Le point d’accès de vérification exige une session d’administration, POST, un jeton CSRF et les droits de création/modification ; il ne sauvegarde rien. Limites : 1 Mo de texte et 10 Ko de titre.
 
-Depuis la version 2.0.6, Joomla détecte les versions GitHub stables via son gestionnaire de mises à jour. Installer la 2.0.8 une fois pour enregistrer le canal, puis utiliser Système → Mise à jour → Extensions. La détection est automatique ; l’installation est déclenchée par l’administrateur, sans télécharger le ZIP manuellement. Les historiques Joomla peuvent aider à revenir en arrière lorsqu’ils sont activés, mais ne remplacent pas une sauvegarde.
+Depuis la version 2.0.6, Joomla détecte les versions GitHub stables via son gestionnaire de mises à jour. Installer la 2.0.9 une fois pour enregistrer le canal, puis utiliser Système → Mise à jour → Extensions. La détection est automatique ; l’installation est déclenchée par l’administrateur, sans télécharger le ZIP manuellement. Les historiques Joomla peuvent aider à revenir en arrière lorsqu’ils sont activés, mais ne remplacent pas une sauvegarde.
 
 ## Validation et dépendances
 
-39 tests du moteur, 16 tests d’intégration Joomla et une suite JavaScript de comparaison/sélection. Vérifications navigateur sur Joomla 6.2.0 / PHP 8.3.30 : aperçu, choix par clic et clavier, application/annulation, sauvegarde avec refus conservé et normalisation Unicode avec zones protégées.
+39 tests du moteur, 19 contrôles de régression sur les césures, 16 tests d’intégration Joomla et une suite JavaScript de comparaison/sélection, incluant les articles longs et 100 essais aléatoires reproductibles. Vérifications navigateur sur Joomla 6.2.0 / PHP 8.3.30 : aperçu, choix par clic et clavier, application/annulation, sauvegarde avec refus conservé et normalisation Unicode avec zones protégées.
 
 JoliTypo 1.8.0, Hyphenator 3.2.0 et le polyfill Symfony Intl Normalizer 1.43.0 sont verrouillés par Composer. Les instructions de construction et de test figurent dans le [README principal](../README.md).
 

@@ -14,3 +14,51 @@ const changes=edits('Bonjour ! Suite...','Bonjour\u202f! Suite…');
 assert.equal(changes.length,2); changes[1].accepted=true;
 assert.equal(applyEdits('Bonjour ! Suite...',changes),'Bonjour ! Suite…');
 console.log('Selective application: all accepted, all refused, mixed and HTML entities passed');
+
+// RobertG: long articles used to collapse into a single highlight crossing HTML.
+const paragraph='<p>En vue de (re)photographier des stylos, un petit exercice.</p>';
+const hyphenated=paragraph.replace('photographier','photo\u00adgra\u00adphier').replace('exercice','exer\u00adcice');
+for(const repeat of [1,40,500]) {
+  const original=paragraph.repeat(repeat), corrected=hyphenated.repeat(repeat);
+  const changes=edits(original,corrected);
+  assert.equal(changes.length,repeat*2,'Each hyphenated word remains independently selectable');
+  assert.ok(changes.every(c=>!/[<>\s]/.test(c.before+c.after)),'No highlight crosses a word or an HTML element');
+  assert.equal(applyEdits(original,changes),original);
+  changes.forEach(c=>c.accepted=true);
+  assert.equal(applyEdits(original,changes),corrected);
+  changes[0].accepted=false;
+  assert.equal(applyEdits(original,changes),corrected.replace('photo\u00adgra\u00adphier','photographier'));
+}
+for(const [original,corrected] of [
+  ['Un petit exercice','Un petit exer\u00adcice'],
+  ['<p>S’écartant de la route</p>','<p>S’écar\u00adtant de la route</p>'],
+  [paragraph.repeat(40)+' Fin...',hyphenated.repeat(40)+' Fin…'],
+  ['Début... '+paragraph.repeat(40)+' Fin...', 'Début… '+hyphenated.repeat(40)+' Fin…'],
+  ['<p>"Bonjour" ! Un exercice...</p>'.repeat(100), '<p>«\u00a0Bonjour\u00a0»\u202f! Un exer\u00adcice…</p>'.repeat(100)],
+  ['&quot;Exercice&quot; &amp; suite...', '«\u00a0Exer\u00adcice\u00a0» &amp; suite…'],
+  ['<p>😀 exercice</p>', '<p>😀 exer\u00adcice</p>'],
+  ['exer\u00adcice','exercice']
+]) {
+  const changes=edits(original,corrected);
+  assert.equal(applyEdits(original,changes),original);
+  changes.forEach(c=>c.accepted=true);
+  assert.equal(applyEdits(original,changes),corrected);
+  assert.ok(changes.every(c=>!/[<>]/.test(c.before+c.after)),'Unchanged HTML never joins a typography correction');
+}
+// Exercise both alignment paths with reproducible unrelated insertions/deletions.
+let seed=20261028;
+const random=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
+const tokens=['exercice','exer\u00adcice','été','😀',' ','.','…','!','\u202f','&amp;','\n'];
+for(let n=0;n<100;n++) {
+  const original=Array.from({length:n<90?30:1800},()=>tokens[Math.floor(random()*tokens.length)]).join('');
+  let corrected=original;
+  for(let i=0;i<20;i++) {
+    const at=Math.floor(random()*corrected.length);
+    corrected=corrected.slice(0,at)+tokens[Math.floor(random()*tokens.length)]+corrected.slice(at+Math.floor(random()*3));
+  }
+  const changes=edits(original,corrected);
+  assert.equal(applyEdits(original,changes),original);
+  changes.forEach(c=>c.accepted=true);
+  assert.equal(applyEdits(original,changes),corrected);
+}
+console.log('RobertG regressions: word-level hyphenation, long/mixed HTML, individual rejection and 100 randomized round trips passed');
